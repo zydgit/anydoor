@@ -61,7 +61,6 @@ module.exports = async function (req, res, filePath) {
       const data = {
         files:files.map((file) => {
           let filename = `${filePath}/${file}`
-          console.log(filePath)
           return {
             file,
             icon:path.relative(filePath.replace('src', ''), path.resolve(__dirname,`../static/images/${mime(file, filename).icon}`))
